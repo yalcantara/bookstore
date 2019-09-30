@@ -24,7 +24,7 @@ Para instalar la aplicación se tienen que realizar una serie de pasos ya que in
 4. Lanzar la aplicación.
 
 
-###Paso 1 – Ejecutar los scripts de la base de datos
+### Paso 1 – Ejecutar los scripts de la base de datos
 
 Los archivos de la base de datos están bajo la carpeta sql dentro de la carpeta raíz proyecto bookstore.
 
@@ -47,7 +47,7 @@ Dentro de la carpeta raíz del proyecto bookstore, navege hasta ubicar el arhivo
 * ```spring.datasource.username=<user>```
 * ```spring.datasource.password=<pass>```
 
-Sustituya <host>, <port>, <user> y <pass> por el servidor, puerto, usuario y contraseña que desea respectivamente. 
+Sustituya ```<host>```, ```<port>```, ```<user>``` y ```<pass>``` por el servidor, puerto, usuario y contraseña que desea respectivamente. 
 
 ### Paso 3 – Compilar y construir el proyecto usando Maven
 
@@ -70,7 +70,7 @@ Con el paso anterior el archivo que contiene todo lo necesario para ejecutar la 
 java –jar bookstore-1.0-SNAPSHOT.jar
 ```
 
-Para confirmar que la aplicación está corriendo correctamente, habrá su navegador preferido y coloque en la barra de dirección:
+Para confirmar que la aplicación está corriendo correctamente, habra su navegador preferido y coloque en la barra de dirección:
 
 ``` 
 http://localhost:8080/books
@@ -82,8 +82,6 @@ Le debe mostrar una lista de libros en formato JSON.
 
 Esta aplicación es un servicio web tipo REST en donde permite que otras aplicaciones y software se conecten a ella vía el protocolo HTTP para extraer información de los libros. El protocolo HTTP es un estándar muy reconocido y utilizado mundialmente. La gran mayoría de los lenguajes y frameworks ofrecen soporte para esta tecnología tanto de forma cliente como servidor. A continuación se detallan algunos routing como ejemplo de uso.
 
-
-
 * GET /books/1
 * GET /books/1
 * GET /books/20
@@ -94,7 +92,7 @@ Esta aplicación es un servicio web tipo REST en donde permite que otras aplicac
 
 Se trato de mantener la aplicación lo más sencilla posible por razones de restricciones de tiempo y su fin en sentido general, sin perder los elementos esenciales de las buenas prácticas de desarrollo de software.
 
-**Importante:** en las instrucciones en GitLab se recomendó utilizar la URL y su path para especificar el formato del contenido de una página de un libro. Las mejores prácticas de implementación de RESTFUL Web Services van en contra de lo sugerido y en vez se utilizo un mecanismo diferente: query  params.
+**Importante:** en las instrucciones en GitLab se recomendó utilizar la URL y su path para especificar el formato del contenido de una página de un libro. Las mejores prácticas de implementación de RESTful Web Services van en contra de lo sugerido y en vez se utilizo un mecanismo diferente: query  params.
 
 Ya que se recomienda que los path de las URL no se modifiquen una vez creado y su diseño jerárquico desde el origen, hacen que la especificación de formatos ahí no sea la más adecuada. RFC 2616 recomienda Content Negotiation, pero requiere enviar headers. En cambio los query params son más flexibles, no estorban los path de las URL y no requieren headers. Por favor consultar las siguientes fuentes:
 
